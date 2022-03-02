@@ -1,73 +1,87 @@
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+      <title>Is Attention All You Need?</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<!DOCTYPE html>
-<html lang="en-US"
-    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-
-<head>
-    <meta name="csrf-param" content="_csrf">
-
-
-
-    <title>Is Attention All You Need?</title>
+      <!-- Display the countdown timer in an element -->
 
 
-    <meta name="description" content="Is Attention All You Need?">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link href="/assets/css-compress/cc6d9764c21b5580b5e7589c47087dbf.css?v=1645911196" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js" integrity="sha256-7lWo7cjrrponRJcS6bc8isfsPDwSKoaYfGIHgSheQkk=" crossorigin="anonymous"></script></head>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2027 12:00:00").getTime();
 
-<body class="d-flex flex-column min-vh-100">
+// Update the count down every 1 second
+var x = setInterval(function() {
 
+  // Get today's date and time
+  var now = new Date().getTime();
 
-    <div class="container">
-        <div class="row">
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<style>
+img {
+  border-radius: 20% !important;
+}
+</style>
+    </head>
+    <body class="bg-light">
+        <div class="px-4 py-5  text-center bg-white" >
+          <h1 class="display-5 fw-bold">
+            Is Attention All You Need? 
+          </h1>
+          <img width="300px" class="p-4 mx-auto d-block" src="https://64.media.tumblr.com/a7af4749aa68b2a99c1011711e8b54cc/tumblr_p4qidxhLsa1wa7o90o1_500.jpg" />
+          <div class="h2">
+            Current Status: Yes
+          </div>
+          
+          <p class="h5 py-2">Time Remaining:
+          <span id="demo"></span></p>
         </div>
 
-        <header>
+      <div class="container text-center py-3">
 
+        <h2 class="p-3">Proposition:</h2>
 
-
-    <div id="content">
-
-
+        <blockquote class="blockquote">
+          <p><em>On January 1, 2027, a <a href="https://arxiv.org/abs/1706.03762" class="text-decoration-none link-secondary">Transformer-like</a> model will continue to hold the state-of-the-art position in <a class="text-decoration-none link-secondary" href="https://super.gluebenchmark.com/leaderboard">most benchmarked tasks</a> in natural language processing.</em></p>
+        </blockquote>
         
-
-
-
-
-
-
-<div class="titleStripe">
-    <div class="container">
-        <!-- Container A -->
-        <div class="row">
-            <!-- Row A -->
-
-            <div class="col-12 col-sm-5">
-
-                <div class="circle statusG">G</div>
-            </div>
-            <div class="col-12 col-sm-7">
-
-                <div class="row top-buffer">
-                                        <div class="col-12 view">
-                        <h1>Is Attention All You Need ?</h1>
-                        <p>Current Status: Yes</p>
-                    </div>
-
-                    
-
-                </div><!-- nested row -->
-            </div>
-
-        </div> 
-
-    </div> <!-- Container A -->
-</div>
-
-
-</body>
-
+        <div class="row align-items-start my-4 p-2">
+          <div class="col">
+            <h2 > For the Motion </h2>
+            <p> <a class="text-decoration-none link-secondary" href="http://www.jfrankle.com/">Jonathan Frankle</a> <br> Harvard Professor <br>Chief Scientist <a class="text-decoration-none link-secondary" href="https://www.mosaicml.com/">Mosaic ML</a></p>
+              
+              <a href="http://www.jfrankle.com/"><img width="50%" src="https://avatars.githubusercontent.com/u/5873008?v=4"/></a>
+          </div>
+          <div class="col">
+            <h2 > Against the Motion </h2>
+            <p> <a class="text-decoration-none link-secondary" href="http://rush-nlp.com">Sasha Rush</a> <br>Cornell Professor<br> Research Scientist <a class="text-decoration-none link-secondary" href="http://hf.co">Hugging Face</a></p>
+            <a href="http://rush-nlp.com/"><img width="50%" src="https://avatars.githubusercontent.com/u/35882?v=4"/></a>
+          </div>
+        </div>
+        <div class="row align-items-start my-4 p-2">
+          <h1>Context</h1>
+          <p>coming soon</p>
+        </div>
+    </body>
 </html>
